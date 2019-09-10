@@ -10,10 +10,10 @@ class GamePlay:
 
 	def __init__(self, GameRunner):
 		self.game = GameRunner
-		self.boardsizeTrain = 5
-		self.boardsizeTest = 5
+		self.boardsizeTrain = 3
+		self.boardsizeTest = 3
 		self.num_iterations_train = 100
-		self.num_iterations_test = 20
+		self.num_iterations_test = 30
 
 	def train(self):
 		self.qL = QLearn(self.boardsizeTrain)
@@ -96,7 +96,7 @@ class QLearn:
 
 	def __init__(self,n):
 		self.qTable = {}
-		self.learningRate = 0.85
+		self.learningRate = 0.5
 		self.discountFactor = 0.9
 		self.randomize = 0.05
 
